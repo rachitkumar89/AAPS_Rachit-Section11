@@ -7,11 +7,12 @@ public class palindrome {
         int i=0;
         int l=s1.length()-1;
         while(i<=l){
-            if(s1.charAt(i)!=s1.charAt(l));
-            
+            if(s1.charAt(i)!=s1.charAt(l)){
+                return false;
+            }
             i++;
             l--;
-            return false;
+            
         }
         return true;
     }
@@ -31,7 +32,7 @@ public class palindrome {
         String s1=sc.nextLine();
         boolean answer1=reverse(s1);
         System.out.println(answer1);
-        boolean answer2=reverse(s1);
+        boolean answer2=twopointer(s1);
         System.out.println(answer2);
         
         sc.close();
